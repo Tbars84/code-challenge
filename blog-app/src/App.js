@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Posts from './posts.component/posts'
 import './App.css';
-
+// import  
 class App extends Component {
+  state = {
+    postsList: [
+      {
+        id: 1,
+        title: 'Lorem Title',
+        content: 'Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title ',
+        imgSrc: 'path/to/img.jpg'
+      },
+      {
+        id: 2,
+        title: 'Lorem Title',
+        content: 'Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title ',
+        imgSrc: 'path/to/img.jpg'
+      },
+      {
+        id: 3,
+        title: 'Lorem Title',
+        content: 'Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title ',
+        imgSrc: 'path/to/img.jpg'
+      },            
+    ]
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>Blog msco.</h1>
+        <Posts postsList={this.state.postsList} />
       </div>
     );
   }
