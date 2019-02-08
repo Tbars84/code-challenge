@@ -9,19 +9,22 @@ class App extends Component {
         id: 1,
         title: 'Lorem Title',
         content: 'Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title ',
-        imgSrc: 'path/to/img.jpg'
+        imgSrc: 'path/to/img.jpg',
+        publish: false
       },
       {
         id: 2,
         title: 'Lorem Title',
         content: 'Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title ',
-        imgSrc: 'path/to/img.jpg'
+        imgSrc: 'path/to/img.jpg',
+        publish: true
       },
       {
         id: 3,
         title: 'Lorem Title',
         content: 'Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title Lorem Title ',
-        imgSrc: 'path/to/img.jpg'
+        imgSrc: 'path/to/img.jpg',
+        publish: false
       },            
     ]
   }
@@ -29,7 +32,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Blog msco.</h1>
-        <Posts postsList={this.state.postsList} />
+        <div className="app-wildcard">
+          <Posts postsList={this.state.postsList} />
+        </div>
       </div>
     );
   }
